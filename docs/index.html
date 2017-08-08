@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project documentation with Markdown.">
+  <meta name="author" content="Sebastien Flochlay">
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - Learn Git</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  <link href="./css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Learn Git</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#git">Git</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#definition">Définition</a></li>
+        
+            <li><a class="toctree-l3" href="#installation-de-git">Installation de Git</a></li>
+        
+            <li><a class="toctree-l3" href="#git-et-son-parametrage">Git et son Paramétrage</a></li>
+        
+            <li><a class="toctree-l3" href="#obtenir-de-laide">Obtenir de l’aide</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="base/">Les bases de Git</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="vim/">Vim</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="demo/">Demo</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Learn Git</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SebastienFlochlay/learn-git/edit/master/docs/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<p>Système de gestion de version décentralisé open source.</p>
+<hr />
+<h2 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
+<h3 id="gestionnaire-de-version">Gestionnaire de version<a class="headerlink" href="#gestionnaire-de-version" title="Permanent link">&para;</a></h3>
+<p>Un gestionnaire de version (VCS - Version Control System) est un système 
+qui trace et enregistre l'évolution d'éléments au cours de vos développements.
+Ce qui vous permet de revenir rapidement à une version antérieure d'un fichier, 
+de ramener le projet complet à un état précédent, de visualiser les changements 
+au cours du temps, de voir qui a modifié quelque chose qui pourrait causer un 
+problème, qui a introduit un problème et quand, et plus encore. 
+Utiliser un VCS signifie aussi généralement que si vous vous trompez ou que 
+vous perdez des fichiers, vous pouvez facilement revenir à un état stable.</p>
+<h2 id="installation-de-git">Installation de Git<a class="headerlink" href="#installation-de-git" title="Permanent link">&para;</a></h2>
+<p>Pour l'installation de Git, vous trouverez tout le nécessaire sur le site <a href="https://git-scm.com/downloads">git-scm.com</a>. 
+Choisissez votre plateforme et procédez à l'installation.</p>
+<h2 id="git-et-son-parametrage">Git et son Paramétrage<a class="headerlink" href="#git-et-son-parametrage" title="Permanent link">&para;</a></h2>
+<p>Maintenant que Git est installé, il est important de personnaliser votre environnement 
+Git dés à présent. Git contient un outil nommé <code>git config</code> qui vous permet de configurer 
+Git à votre convenance. Pour information, ces variables de configuration peuvent être 
+stockées dans trois endroits différents :</p>
+<ul>
+<li><code>--system</code></li>
+</ul>
+<p>Le fichier <code>/etc/gitconfig</code> contient les valeurs pour tous les utilisateurs et tous les dépôts du système. 
+Si vous passez l’option <code>--system</code> à git config, il lit et écrit ce fichier spécifiquement.</p>
+<ul>
+<li><code>--global</code></li>
+</ul>
+<p>Le fichier <code>~/.gitconfig</code> est spécifique à votre utilisateur. Vous pouvez forcer Git à lire et écrire 
+ce fichier en passant l’option <code>--global</code>.</p>
+<ul>
+<li><code>--local</code></li>
+</ul>
+<p>Le fichier config dans le répertoire Git (c’est-à-dire <code>.git/config</code> ) du dépôt en cours d’utilisation est
+spécifique au seul dépôt en cours. C'est le niveau par défaut lorsque vous utilisez la commande <code>git config</code>,
+mais vous pouvez bien sûr tout aussi bien utiliser l'option <code>--local</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Chaque niveau surcharge le niveau précédent, donc les valeurs dans .git/config surchargent 
+celles de /etc/gitconfig.</p>
+</div>
+<h4 id="votre-identite">Votre identité<a class="headerlink" href="#votre-identite" title="Permanent link">&para;</a></h4>
+<p>La première chose à faire après l’installation de Git est de renseigner votre nom et votre adresse mail. 
+C’est une information importante car toutes les validations dans Git utilisent cette information et elle est 
+indélébile dans toutes les validations que vous pourrez réaliser :</p>
+<pre><code class="bash">$ git config --global user.name &quot;John Doe&quot;
+$ git config --global user.email johndoe@example.com
+</code></pre>
+
+<p>Si vous avez bien suivi Cette étape n’est nécessaire qu’une fois puisque vous passez l’option <code>--global</code>. Si vous 
+souhaitez surcharger ces valeurs avec un nom ou une adresse mail différents pour un projet spécifique, vous pouvez 
+lancer ces commandes sans option <code>--global</code> lorsque vous êtes dans ce projet.</p>
+<h4 id="votre-editeur-de-texte">Votre éditeur de texte<a class="headerlink" href="#votre-editeur-de-texte" title="Permanent link">&para;</a></h4>
+<p>À présent que votre identité est renseignée, vous pouvez configurer l’éditeur de texte qui sera utilisé quand Git 
+vous demande de saisir un message. Par défaut, Git utilise l’éditeur configuré au niveau système, qui est 
+généralement Vi ou Vim. Si vous souhaitez utiliser explicitement VIM vous pouvez entrer ce qui suit :</p>
+<pre><code class="bash">$ git config --global core.editor vim
+</code></pre>
+
+<p>Voici une liste récapitulant quelques exemples d'éditeur de texte :</p>
+<table>
+<thead>
+<tr>
+<th>Editeur</th>
+<th>Commande</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atom</td>
+<td><code>git config --global core.editor "atom --wait"</code></td>
+</tr>
+<tr>
+<td>emacs</td>
+<td><code>git config --global core.editor "emacs"</code></td>
+</tr>
+<tr>
+<td>nano</td>
+<td><code>git config --global core.editor "nano -w"</code></td>
+</tr>
+<tr>
+<td>vim</td>
+<td><code>git config --global core.editor "vim"</code></td>
+</tr>
+<tr>
+<td>Sublime Text (Mac)</td>
+<td><code>git config --global core.editor "subl -n -w"</code></td>
+</tr>
+<tr>
+<td>Sublime Text (Win, 32-bit install)</td>
+<td><code>git config --global core.editor "'c:/program files (x86)/sublime text 3/sublimetext.exe' -w"</code></td>
+</tr>
+<tr>
+<td>Sublime Text (Win, 64-bit install)</td>
+<td><code>git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"</code></td>
+</tr>
+<tr>
+<td>Textmate</td>
+<td><code>git config --global core.editor "mate -w"</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="lister-vos-parametres">Lister vos paramètres<a class="headerlink" href="#lister-vos-parametres" title="Permanent link">&para;</a></h4>
+<p>Il est bien sûr possible de vérifier vos réglages en listant vos paramètres via la commande suivante <strong><code>git config --list</code></strong> :</p>
+<pre><code class="bash">$ git config --list
+user.name=John Doe
+user.email=johndoe@example.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+</code></pre>
+
+<p>Vous pourrez observer certains paramètres apparaître plusieurs fois dans votre list, et c'est normal puisque Git liste 
+les mêmes paramètres depuis plusieurs fichiers (/etc/gitconfig et ~/.gitconfig, par exemple). 
+Il suffi de savoir que Git utilise la dernière valeur pour chaque paramètre.</p>
+<p>En cas de doute, vous pourrez vérifier la véritable valeur d'un paramètre en spécifiant sont nom :</p>
+<pre><code class="bash">$ git config user.name
+John Doe
+</code></pre>
+
+<h2 id="obtenir-de-laide">Obtenir de l’aide<a class="headerlink" href="#obtenir-de-laide" title="Permanent link">&para;</a></h2>
+<p>En cas de souci sur une commande, vous pouvez toujours jeter un œil au manuel.</p>
+<pre><code class="bash">$ git help &lt;commande&gt;
+$ git &lt;commande&gt; --help
+$ man git-&lt;commande&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="base/" class="btn btn-neutral float-right" title="Les bases de Git">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://twitter.com/_tomchristie">Sebastien Flochlay</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SebastienFlochlay/learn-git/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+        <span style="margin-left: 15px"><a href="base/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2017-08-08 14:16:18
+-->

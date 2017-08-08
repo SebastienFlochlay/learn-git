@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Sebastien Flochlay">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Vim - Learn Git</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Vim";
+    var mkdocs_page_input_path = "vim.md";
+    var mkdocs_page_url = "/vim/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Learn Git</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../base/">Les bases de Git</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Vim</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#vi-improved">Vi IMproved</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l3" href="#principe-de-base">Principe de base</a></li>
+        
+            <li><a class="toctree-l3" href="#commandes-de-base">Commandes de base</a></li>
+        
+            <li><a class="toctree-l3" href="#commandes-dedition">Commandes d'édition</a></li>
+        
+            <li><a class="toctree-l3" href="#recherche-remplacement">Recherche / Remplacement</a></li>
+        
+            <li><a class="toctree-l3" href="#fenetrage">Fenêtrage</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../demo/">Demo</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Learn Git</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Vim</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SebastienFlochlay/learn-git/edit/master/docs/vim.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="vi-improved">Vi IMproved<a class="headerlink" href="#vi-improved" title="Permanent link">&para;</a></h1>
+<p>Le plus tricky des éditeurs de texte modal !</p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.vim.org/">Vim</a> est un <strong>éditeur de texte</strong> pour le terminal sous GNU/Linux. Directement inspiré
+de <strong>vi</strong>, il possède une stabilité exemplaire, une quantité de fonctions très apprécié 
+des développeurs (coloration syntaxique de 200 langages, complétion automatique, 
+comparaison de fichiers, recherche évoluée) et est extensible par des scripts.</p>
+<p>Certes très austère, c'est pourtant un outil véritablement très puissant pour ceux 
+capables le dompter.</p>
+<h2 id="principe-de-base">Principe de base<a class="headerlink" href="#principe-de-base" title="Permanent link">&para;</a></h2>
+<p>Pour <strong>créer ou modifier un fichier</strong> avec vim utilisez la commande suivante :</p>
+<pre><code class="bash">vim my_file_path
+</code></pre>
+
+<p>Si le fichier n'existe pas il sera créé automatiquement.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Et voilà, le fichier s'affiche et vous êtes dans le <strong>mode commande</strong>. Pour déplacer le curseur utilisez 
+les flèches ou les touche <code>H, J, K, L</code>. C'est dans ce mode que vous pouvez entrer des commandes 
+pour agir sur le texte. </p>
+<p>Appuyez sur <code>i</code> pour accéder au <strong>mode insertion</strong> ou <code>Échap</code> pour en sortir.</p>
+</div>
+<h2 id="commandes-de-base">Commandes de base<a class="headerlink" href="#commandes-de-base" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Commandes</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code></td>
+<td>Passer dans le mode insertion</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>Ajouter en fin de ligne</td>
+</tr>
+<tr>
+<td><code>0 ou $</code></td>
+<td>Se déplacer en début ou fin de ligne</td>
+</tr>
+<tr>
+<td><code>:q</code></td>
+<td>Quitter</td>
+</tr>
+<tr>
+<td><code>:q!</code></td>
+<td>Quitter sans enregistrer</td>
+</tr>
+<tr>
+<td><code>:w</code></td>
+<td>Enregistrer le fichier</td>
+</tr>
+<tr>
+<td><code>:wq</code></td>
+<td>Enregistrer et quitter</td>
+</tr>
+<tr>
+<td><code>:x</code></td>
+<td>Enregistrer (seulement en cas de modification) et quitter</td>
+</tr>
+<tr>
+<td><code>:set paste</code></td>
+<td>Passer en mode "collage"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commandes-dedition">Commandes d'édition<a class="headerlink" href="#commandes-dedition" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Commandes</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>u</code></td>
+<td>Annuler la dernière opération</td>
+</tr>
+<tr>
+<td><code>&lt;control&gt;-r</code></td>
+<td>Rétablir la dernière opération annulée</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Répéter la dernière opération d'édition</td>
+</tr>
+<tr>
+<td><code>yy</code></td>
+<td>Copier la ligne (<em>4yy = 4 lignes</em>)</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>Couper la ligne (<em>4dd = 4 lignes</em>)</td>
+</tr>
+<tr>
+<td><code>d0 ou d$</code></td>
+<td>Supprimer le début ou la fin de la ligne</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>Coller après (<em>P = insérer avant</em>)</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>Effacer le caractère</td>
+</tr>
+<tr>
+<td><code>dw</code></td>
+<td>Effacer le texte jusqu'à la fin du mot</td>
+</tr>
+<tr>
+<td><code>diw</code></td>
+<td>Effacer le mot sous le curseur</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>Sauter à la ligne (<em>7G pour la ligne n°7</em>), par défaut le curseur sute à la dernière ligne</td>
+</tr>
+<tr>
+<td><code>gg</code></td>
+<td>Sauter à la première ligne</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Taper un nombre avant une commande vous permettra d'exécuter la commande plusieurs fois... </p>
+</div>
+<h2 id="recherche-remplacement">Recherche / Remplacement<a class="headerlink" href="#recherche-remplacement" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Commandes</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>Rechercher du texte (<em><code>?</code> pour remonter dans le fichier</em>)</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Rechercher l'occurence suivante</td>
+</tr>
+<tr>
+<td><code>N</code></td>
+<td>Rechercher l'occurence précédente</td>
+</tr>
+<tr>
+<td><code>cw</code></td>
+<td>Remplacer le texte jusqu'à la fin du mot</td>
+</tr>
+<tr>
+<td><code>ciw</code></td>
+<td>Remplacer le mot</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>Remplacer jusqu'en fin de ligne</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Répéter la dernière opération d'édition</td>
+</tr>
+<tr>
+<td><code>:s/ancien/nouveau/g</code></td>
+<td>Rechercher et remplacer du texte à la ligne où se trouve le curseur</td>
+</tr>
+<tr>
+<td><code>:%s/ancien/nouveau/g</code></td>
+<td>Rechercher et remplacer du texte</td>
+</tr>
+<tr>
+<td><code>:r file_name</code></td>
+<td>Insérer un fichier à la position du curseur</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fenetrage">Fenêtrage<a class="headerlink" href="#fenetrage" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Commandes</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;control-w&gt;-s ou :sp</code></td>
+<td>Diviser horizontalement</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-v ou :vsp</code></td>
+<td>Diviser verticalement</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-h/j/k/l</code></td>
+<td>Passer à la fenêtre suivante</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-w</code></td>
+<td>Passer à la fenêtre suivante</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-+</code></td>
+<td>Agrandit le viewport actuel</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;--</code></td>
+<td>Réduit  le viewport actuel</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-=</code></td>
+<td>Egalise à nouveau la taille des viewports.</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-r</code></td>
+<td>Echange la position des viewports (<em><code>R</code> pour le sens inverse</em>)</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-n</code></td>
+<td>Ouvrir un fichier vierge dans une nouvelle fenêtre</td>
+</tr>
+<tr>
+<td><code>&lt;control-w&gt;-q</code></td>
+<td>Fermer la fenêtre</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h3>
+<p><a href="https://doc.ubuntu-fr.org/vim">Documentation Ubuntu</a></p>
+<p><a href="https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux/vim-l-editeur-de-texte-du-programmeur">Documentation OpenClassrooms</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../demo/" class="btn btn-neutral float-right" title="Demo">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../base/" class="btn btn-neutral" title="Les bases de Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://twitter.com/_tomchristie">Sebastien Flochlay</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SebastienFlochlay/learn-git/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../base/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../demo/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

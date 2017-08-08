@@ -1,0 +1,40 @@
+site_name: Learn Git
+site_url: http://www.mkdocs.org
+site_description: Project documentation with Markdown.
+site_author: Sebastien Flochlay
+
+docs_dir: 'contents'
+site_dir: 'docs'
+
+repo_url: https://github.com/SebastienFlochlay/learn-git/
+repo_name: 'GitHub'
+
+pages:
+- Home: index.md
+- Les bases de Git: base.md
+#- User Guide:
+#    - Writing Your Docs: user-guide/writing-your-docs.md
+#    - Styling Your Docs: user-guide/styling-your-docs.md
+#    - Configuration: user-guide/configuration.md
+#    - Deploying Your Docs: user-guide/deploying-your-docs.md
+#    - Custom Themes: user-guide/custom-themes.md
+- Vim: vim.md
+- Demo: demo.md
+#- About:
+#    - Release Notes: about/release-notes.md
+#    - Contributing: about/contributing.md
+#    - License: about/license.md
+
+extra_css:
+    - css/extra.css
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - admonition
+
+copyright: Copyright &copy; 2017 <a href="https://twitter.com/_tomchristie">Sebastien Flochlay</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
+
+theme: 'readthedocs'
+#theme: 'mkdocs'
+#theme: 'material'

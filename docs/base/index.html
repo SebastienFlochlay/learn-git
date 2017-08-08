@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Sebastien Flochlay">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Les bases de Git - Learn Git</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Les bases de Git";
+    var mkdocs_page_input_path = "base.md";
+    var mkdocs_page_url = "/base/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Learn Git</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Les bases de Git</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#les-bases-de-git">Les bases de Git</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#initialiser-un-depot">Initialiser un dépot</a></li>
+        
+            <li><a class="toctree-l3" href="#cloner-un-depot-existant">Cloner un dépôt existant</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vim/">Vim</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../demo/">Demo</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Learn Git</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Les bases de Git</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SebastienFlochlay/learn-git/edit/master/docs/base.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="les-bases-de-git">Les bases de Git<a class="headerlink" href="#les-bases-de-git" title="Permanent link">&para;</a></h2>
+<h3 id="initialiser-un-depot">Initialiser un dépot<a class="headerlink" href="#initialiser-un-depot" title="Permanent link">&para;</a></h3>
+<p>Vous pouvez initialiser un dépot de deux manières. La première consiste à prendre un projet ou un répertoire 
+existant et à l’importer dans Git. La seconde consiste à cloner un dépôt Git existant sur un autre serveur.</p>
+<h4 id="initialisation-dun-depot-git-dans-un-repertoire-existant">Initialisation d’un dépôt Git dans un répertoire existant<a class="headerlink" href="#initialisation-dun-depot-git-dans-un-repertoire-existant" title="Permanent link">&para;</a></h4>
+<p>Si vous commencez à suivre un projet existant dans Git, vous n’avez qu’à vous positionner dans le répertoire 
+du projet et saisir :</p>
+<pre><code class="bash">$ git init
+</code></pre>
+
+<p>Cela crée un nouveau sous-répertoire nommé <code>.git</code> qui contient tous les fichiers nécessaires au dépôt. </p>
+<h3 id="cloner-un-depot-existant">Cloner un dépôt existant<a class="headerlink" href="#cloner-un-depot-existant" title="Permanent link">&para;</a></h3>
+<p>Si vous souhaitez obtenir une copie d’un dépôt Git existant, la commande dont vous avez besoin s’appelle <code>git clone</code>. 
+Il est important de bien comprendre qu'avec cette commande, Git reçoit une copie de quasiment toutes les données 
+dont le serveur dispose. Toutes les versions de tous les fichiers pour l’historique du projet sont téléchargées 
+quand vous lancez git clone.</p>
+<pre><code class="bash">$ git clone https://github.com/Kotlin/kotlin-koans.git
+</code></pre>
+
+<p>Ceci crée un répertoire nommé “kotlin-koans”, initialise un répertoire .git à l’intérieur, récupère toutes les données 
+de ce dépôt, et extrait une copie de travail de la dernière version. Si vous souhaitez cloner le dépôt dans un 
+répertoire nommé différemment, vous pouvez spécifier le nom dans une option supplémentaire de la ligne de commande :</p>
+<pre><code class="bash">$ git clone https://github.com/Kotlin/kotlin-koans.git my-kotlin-koans
+</code></pre>
+
+<p>Cette commande réalise la même chose que la précédente, mais le répertoire cible s’appelle my-kotlin-koans.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../vim/" class="btn btn-neutral float-right" title="Vim">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://twitter.com/_tomchristie">Sebastien Flochlay</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SebastienFlochlay/learn-git/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../vim/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
